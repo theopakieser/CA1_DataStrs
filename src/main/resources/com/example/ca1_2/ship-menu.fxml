@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca1_2.ShipController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="382.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a Ship" underline="true">
+                           <font>
+                              <Font name="Century Schoolbook" size="29.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="shipName" layoutX="350.0" layoutY="68.0" promptText="Enter Ship Name" />
+                        <TextField fx:id="id" layoutX="350.0" layoutY="111.0" promptText="Enter Ship ID" />
+                        <TextField fx:id="state" layoutX="350.0" layoutY="148.0" promptText="Enter Ship's FlagState" />
+                        <TextField fx:id="photograph" layoutX="350.0" layoutY="186.0" promptText="Enter Url for Photograph" />
+                        <Button layoutX="501.0" layoutY="267.0" mnemonicParsing="false" onAction="#onAddShipClicked" text="Add" />
+                        <Text fill="#fa0606" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First: Pick a Port!!!">
+                           <font>
+                              <Font name="Century Schoolbook" size="25.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="viewPortName" layoutX="12.0" layoutY="68.0" promptText="Enter Port Name" />
+                        <TextArea fx:id="viewPort" layoutX="7.0" layoutY="104.0" prefHeight="242.0" prefWidth="205.0" />
+                        <Button layoutX="175.0" layoutY="68.0" mnemonicParsing="false" onAction="#onPickPortClicked" text="Search" />
+                        <TextField fx:id="portName" layoutX="351.0" layoutY="225.0" promptText="Enter Name of Port" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="View All Ship Locations">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="viewShips" layoutX="14.0" layoutY="146.0" prefHeight="200.0" prefWidth="571.0" />
+                        <Button layoutX="219.0" layoutY="46.0" mnemonicParsing="false" onAction="#onViewShipsClicked" prefHeight="60.0" prefWidth="161.0" text="Where are the ships?">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Edit Docking Status">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1) Find Your Ship" underline="true" wrappingWidth="116.62652587890625">
+                           <font>
+                              <Font name="Century Schoolbook" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="dockingViewShipName" layoutX="11.0" layoutY="36.0" prefHeight="19.0" prefWidth="110.0" promptText="Enter Ship Name" />
+                        <Button layoutX="123.0" layoutY="35.0" mnemonicParsing="false" onAction="#onPickShipClicked" prefHeight="26.0" prefWidth="57.0" text="Search" />
+                        <TextArea fx:id="dockingViewShip" layoutX="11.0" layoutY="72.0" prefHeight="103.0" prefWidth="138.0" />
+                        <Text layoutX="15.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2) Find Your Port" underline="true">
+                           <font>
+                              <Font name="Century Schoolbook" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="dockingViewPortName" layoutX="11.0" layoutY="210.0" prefHeight="26.0" prefWidth="122.0" promptText="Enter Port Name" />
+                        <TextArea fx:id="dockingViewPort" layoutX="14.0" layoutY="250.0" prefHeight="114.0" prefWidth="138.0" />
+                        <Button layoutX="143.0" layoutY="211.0" mnemonicParsing="false" onAction="#onDockingPickPortClicked" text="Search" />
+                        <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3) Change Docking Status" underline="true">
+                           <font>
+                              <Font name="Century Schoolbook" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="editDockingShipName" layoutX="323.0" layoutY="60.0" promptText="Enter Ship Name" />
+                        <TextField fx:id="editDockingPortName" layoutX="324.0" layoutY="99.0" promptText="Docked At..." />
+                        <Button layoutX="492.0" layoutY="79.0" mnemonicParsing="false" onAction="#onEditDockingClicked" prefHeight="33.0" prefWidth="61.0" text="Edit">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="editDockingViewShip" layoutX="273.0" layoutY="150.0" prefHeight="200.0" prefWidth="304.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
