@@ -9,7 +9,6 @@ import java.io.IOException;
 public class ShipController {
 
     public TextField shipName, id, state, photograph, portName, viewPortName, dockingViewPortName, dockingViewShipName, editDockingShipName, editDockingPortName;
-
     public TextArea viewPort, viewShips, dockingViewPort, dockingViewShip, editDockingViewShip;
 
 
@@ -88,27 +87,24 @@ public class ShipController {
     }
 
     @FXML
-    //TODO fix on edit docking clicked using edit method in ca2
     protected void onEditDockingClicked() {
-        TheList<Port>.TheNode<Port> pickedPort = HelloApplication.ports.head;
-        TheList<Ship>.TheNode<Ship> pickedShip = HelloApplication.ships.head;
-        String portName = "";
-        StringBuilder setPortName = new StringBuilder();
-        setPortName.append(editDockingPortName.getText());
-        editDockingPortName.appendText(portName);
-        while (pickedPort!=null) {
-            if (pickedPort.getContents() != null && pickedPort.getContents().getName().equals(editDockingPortName.getText())) {
-                if(pickedPort!= null && pickedShip.getContents().getName().equals(editDockingShipName.getText())){
-                    pickedShip.getContents().setDockedAt(portName);
-                } else { pickedShip=pickedShip.next; }
-                return;
-            } else {
-                pickedPort=pickedPort.next;
+        TheList<Port>.TheNode<Port> portName = HelloApplication.ports.head;
+        while (portName != null) {
+            if (portName.getContents().getName().equals(dockingViewPortName.getText())) {
+                dockingViewPort.setText(portName.toString());
+                TheList<Ship>.TheNode<Ship> tempShip = HelloApplication.ships.head;
+                while (tempShip != null) {
+                    if (tempShip.getContents().getName().equals(editDockingShipName.getText())) {
+                        Ship editedShip = tempShip.getContents();
+                        editedShip.setDockedAt(editDockingPortName.getText());
+                        System.out.println(editedShip);
+                        return;
+                    } else {
+                        tempShip = tempShip.next;
+                    }
+                }
             }
         }
-
-        System.out.println("Not found :(");
     }
-
 
 }

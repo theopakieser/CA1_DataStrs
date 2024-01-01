@@ -25,8 +25,9 @@ public class Ship {
       return dockedAt;
     }
 
-    public void setDockedAt(String dockedAt) {
+    public Ship setDockedAt(String dockedAt) {
         this.dockedAt = dockedAt;
+        return null;
     }
 
     public String getPhotograph() {

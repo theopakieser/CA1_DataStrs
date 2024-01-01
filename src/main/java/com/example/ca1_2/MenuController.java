@@ -92,15 +92,7 @@ public class MenuController {
         }
     }
 
-    @FXML
-    protected void onSettingsClicked() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("settings-menu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
-        Stage stage = new Stage();
-        stage.setTitle("The Settings Menu");
-        stage.setScene(scene);
-        stage.show();
-    }
+ //TODO figure out save and load
 
 
 }

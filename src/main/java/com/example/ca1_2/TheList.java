@@ -39,6 +39,8 @@ public class TheList<T> {
         return size;
     }
 
+
+
     class TheNode<N>{
         public TheNode<N> next = null;
         private N contents;
