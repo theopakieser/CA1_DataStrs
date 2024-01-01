@@ -53,7 +53,7 @@ public class PalletController {
     @FXML
     protected void onViewPalletsClicked() throws IOException {
         TheList.TheNode temp = HelloApplication.pallets.head;
-        StringBuilder pallets = new StringBuilder(); //creates a stringbuilder to loop the text - https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/
+        StringBuilder pallets = new StringBuilder(); //creates a stringbuilder to loop the text - yoinked from ca2
         while (temp != null) {
             pallets.append(temp.toString()).append("\n"); // append makes the Stringbuilder exist via toString then uses the \n to new line after each
             temp = temp.next;
@@ -88,7 +88,7 @@ public class PalletController {
     @FXML
     protected void onViewPalletsDesClicked() throws IOException {
         TheList<Pallet>.TheNode<Pallet> temp = HelloApplication.pallets.head;
-        StringBuilder pallets = new StringBuilder(); //creates a stringbuilder to loop the text - https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/
+        StringBuilder pallets = new StringBuilder(); //creates a stringbuilder to loop the text - yoinked from ca2
         while (temp != null) {
             pallets.append(temp.getContents().getDescription()).append("\n"); // append makes the Stringbuilder exist via toString then uses the \n to new line after each
             temp = temp.next;
@@ -99,7 +99,7 @@ public class PalletController {
     @FXML
     protected void onViewPalletsValClicked() throws IOException {
         TheList<Pallet>.TheNode<Pallet> temp = HelloApplication.pallets.head;
-        StringBuilder pallets = new StringBuilder(); //creates a stringbuilder to loop the text - https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/
+        StringBuilder pallets = new StringBuilder(); //creates a stringbuilder to loop the text -yoinked from ca2
         while (temp != null) {
             pallets.append(temp.getContents().getUnitValue()).append("\n"); // append makes the Stringbuilder exist via toString then uses the \n to new line after each
             temp = temp.next;

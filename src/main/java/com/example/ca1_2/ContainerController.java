@@ -48,7 +48,7 @@ public class ContainerController {
     @FXML
     protected void onViewContainersClicked() throws IOException {
         TheList.TheNode temp = HelloApplication.containers.head;
-        StringBuilder containers = new StringBuilder(); //creates a stringbuilder to loop the text - https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/
+        StringBuilder containers = new StringBuilder(); //creates a stringbuilder to loop the text - yoinked from ca2
         while (temp != null) {
              containers.append(temp.toString()).append("\n"); // append makes the Stringbuilder exist via toString then uses the \n to new line after each
             temp = temp.next;

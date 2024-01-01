@@ -29,6 +29,16 @@ public class TheList<T> {
         }
     }
 
+    public int size(){
+        int size =0;
+        TheList.TheNode current = head;
+        while (current!=null){
+            size++;
+            current=current.next;
+        }
+        return size;
+    }
+
     class TheNode<N>{
         public TheNode<N> next = null;
         private N contents;
