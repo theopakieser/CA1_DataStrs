@@ -44,13 +44,13 @@ class PortTest {
         assertEquals("Canada", p2.getCountry());
     }
 
-//    @Test
-//    void toStringTest(){
-//        String toStringContains = p4.toString();
-//        assertTrue(toStringContains.contains("name='" + p4.getName()));
-//        assertTrue(toStringContains.contains( "intCode=" + p4.getIntCode()));
-//        assertTrue(toStringContains.contains( "country=" + p4.getCountry()));
-//    }
-//TODO fix tostring test
+    @Test
+    void toStringTest(){
+        String toStringContains = p4.toString();
+        assertTrue(toStringContains.contains("name='" + p4.getName()));
+        assertTrue(toStringContains.contains("intCode=" + p4.getIntCode()));
+
+    }
+
 
 }

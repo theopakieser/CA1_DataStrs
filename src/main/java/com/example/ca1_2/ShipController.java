@@ -18,7 +18,7 @@ public class ShipController {
         while (foundPort != null) {
             if (foundPort.getContents().getName().equals(portName.getText())) {
                 viewPort.setText(foundPort.toString());
-                HelloApplication.ships.addElement(new Ship(shipName.getText(), id.getText(), state.getText(), photograph.getText(), foundPort.getContents().getName()));
+                HelloApplication.ships.addElement(new Ship(shipName.getText(), id.getText(), state.getText(), photograph.getText(), foundPort.getContents()));
                 System.out.println(HelloApplication.ships.head);
                 return; // Exit the method after adding
             } else {
@@ -96,7 +96,8 @@ public class ShipController {
                 while (tempShip != null) {
                     if (tempShip.getContents().getName().equals(editDockingShipName.getText())) {
                         Ship editedShip = tempShip.getContents();
-                        editedShip.setDockedAt(editDockingPortName.getText());
+                        Port tempPort = portName.getContents();
+                        editedShip.setDockedAt(tempPort);
                         System.out.println(editedShip);
                         return;
                     } else {

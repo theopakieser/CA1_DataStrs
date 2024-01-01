@@ -30,9 +30,9 @@ class TheListTest {
 
         shipsList = new TheList<>();
         shipsListEmpty = new TheList<>();
-        s1 = new Ship("aC", "01C", "China", "qwertyuiop", "A");
-        s2 = new Ship("bA", "024A","New York", "asdfghjkl", "b");
-        s3=new Ship("cI", "250I", "Dublin", "zmxncbv", "c" );
+        s1 = new Ship("aC", "01C", "China", "qwertyuiop", p1);
+        s2 = new Ship("bA", "024A","New York", "asdfghjkl", p2);
+        s3=new Ship("cI", "250I", "Dublin", "zmxncbv", p3);
 
         containersList = new TheList<>();
         containersListEmpty = new TheList<>();

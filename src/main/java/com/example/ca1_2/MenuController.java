@@ -94,6 +94,27 @@ public class MenuController {
 
  //TODO figure out save and load
 
+    @FXML
+    protected void onSavePortsClicked() throws IOException {
+        try{
+            HelloApplication.ports.save();
+        }catch (Exception e) {
+            System.err.println("Error writing to file: " + e);
+        }
+
+    }
+
+    @FXML
+    protected void onLoadPortsClicked() throws IOException {
+        try{
+            HelloApplication.ports.load();
+        }catch (Exception e) {
+            System.err.println("Error reading from file: " + e);
+        }
+
+    }
+
+
 
 }
 

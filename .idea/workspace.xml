@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19ac6b05-22cc-47ec-bbf1-377c4b6d3b8f" name="Changes" comment="list and port test 5/5">
+    <list default="true" id="19ac6b05-22cc-47ec-bbf1-377c4b6d3b8f" name="Changes" comment="fixed edit docking status">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/SettingsController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/ShipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/ShipController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/TheList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ca1_2/TheList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ca1_2/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ca1_2/main-menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ca1_2/settings-menu.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/com/example/ca1_2/PortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/example/ca1_2/PortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/example/ca1_2/TheListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/example/ca1_2/TheListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/saveFile.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,10 +102,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PortTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA1_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.ca1_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.ca1_2" />
+      <option name="MAIN_CLASS_NAME" value="com.example.ca1_2.PortTest" />
+      <option name="METHOD_NAME" value="toStringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="JUnit.PortTest" />
+        <item itemvalue="JUnit.PortTest.toStringTest" />
       </list>
     </recent_temporary>
   </component>
@@ -114,7 +138,7 @@
       <workItem from="1703279358480" duration="15825000" />
       <workItem from="1703772039314" duration="25225000" />
       <workItem from="1704038306210" duration="3221000" />
-      <workItem from="1704135068985" duration="1956000" />
+      <workItem from="1704135068985" duration="5707000" />
     </task>
     <task id="LOCAL-00001" summary="list and port test 5/5">
       <created>1704128223525</created>
@@ -123,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704128223525</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed edit docking status">
+      <created>1704137388188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704137388188</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +173,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="list and port test 5/5" />
-    <option name="LAST_COMMIT_MESSAGE" value="list and port test 5/5" />
+    <MESSAGE value="fixed edit docking status" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed edit docking status" />
   </component>
 </project>

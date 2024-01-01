@@ -2,12 +2,11 @@ package com.example.ca1_2;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
+
 public class TheList<T> {
     public TheNode<T> head = null;
+
 
     public void addElement(T e){
         TheNode<T> tn = new TheNode<>();
@@ -38,6 +37,24 @@ public class TheList<T> {
         }
         return size;
     }
+
+
+public void save() throws IOException {
+        TheNode <T> tempN = new TheNode<>();
+    XStream xstream = new XStream(new DomDriver());
+    ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("saveFile.xml"));
+    out.writeObject(tempN);
+}
+
+public void load() throws IOException, ClassNotFoundException {
+ Class<?>[] classes = new Class[]{TheNode.class};
+       XStream xstream = new XStream(new DomDriver());
+    XStream.setupDefaultSecurity(xstream);
+        xstream.allowTypes(classes);
+       ObjectInputStream is = xstream.createObjectInputStream(new FileReader("saveFile.xml"));
+       TheNode<T> tempN = (TheNode<T>) is.readObject();
+     is.close();
+   }
 
 
 

@@ -7,13 +7,13 @@ public class Ship {
 
     private String photograph;
 
-    private String dockedAt;
+    private Port dockedAt;
 
 
 
     TheList<Ship> ships = new TheList<>();
 
-    public Ship(String name, String shipID, String flagState, String photograph, String dockedAt) {
+    public Ship(String name, String shipID, String flagState, String photograph, Port dockedAt) {
         this.name = name;
         this.shipID = shipID;
         this.flagState = flagState;
@@ -21,13 +21,12 @@ public class Ship {
         this.dockedAt=dockedAt;
     }
 
-    public String getDockedAt() {
+    public Port getDockedAt() {
       return dockedAt;
     }
 
-    public Ship setDockedAt(String dockedAt) {
+    public void setDockedAt(Port dockedAt) {
         this.dockedAt = dockedAt;
-        return null;
     }
 
     public String getPhotograph() {
